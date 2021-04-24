@@ -5,7 +5,7 @@
 It is recommend to use `Use this template` button on upper-right side of github project page,
 to create your project repository.
 
-![](https://docs.github.com/assets/images/help/repository/use-this-template-button.png)
+![](https://github.com/vaish3496/TimeElapsed-OmegaT-Plugin/blob/master/screenshots/SS1.PNG)
 
 ## Build system
 
