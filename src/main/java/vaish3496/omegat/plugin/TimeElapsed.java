@@ -26,7 +26,10 @@
 
 package vaish3496.omegat.plugin;
 
-
+/**
+ *
+ * @author vaish3496
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
