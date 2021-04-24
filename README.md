@@ -1,6 +1,6 @@
-# OmegaT plugin development skeleton
+# OmegaT plugin for Time Elapsed Using OmegaT Software
 
-## How to get skeleton into your project
+## Preview
 
 It is recommend to use `Use this template` button on upper-right side of github project page,
 to create your project repository.
