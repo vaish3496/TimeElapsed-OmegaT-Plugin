@@ -44,7 +44,6 @@ public class ProjectChangeListener implements IProjectEventListener{
         TimeLog timeLog = TimeLog.getTimeLog();
         switch(eventType){
             case LOAD:
-                //do somethinge
                 try {
                     timeLog.addJLabel();
                     timeLog.setElapsedTime(timeElapsedTracker.getTimeElapsed()); 
@@ -57,7 +56,6 @@ public class ProjectChangeListener implements IProjectEventListener{
                 break;
 
             case CLOSE:
-                //do something
                 try {
                     timeLog.stopTimer();
                     timeElapsedTracker.setTimeElaspsed(timeLog.getElapsedTime());

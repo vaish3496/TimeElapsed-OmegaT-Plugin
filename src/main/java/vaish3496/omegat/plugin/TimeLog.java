@@ -56,7 +56,7 @@ public class TimeLog {
         }
     });
    
-    
+    // singleton design pattern
     private TimeLog(){
     }
     
