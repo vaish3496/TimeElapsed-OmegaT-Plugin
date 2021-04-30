@@ -30,37 +30,44 @@ package vaish3496.omegat.plugin;
  *
  * @author vaish3496
  */
-import javax.swing.SwingUtilities;
-import org.omegat.core.CoreEvents;
-import org.omegat.core.events.IApplicationEventListener;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import org.omegat.core.events.IProjectEventListener;
 
 
-public class TimeElapsed implements IApplicationEventListener{
-     
-    public static void loadPlugins() {
-        
-        CoreEvents.registerApplicationEventListener(new TimeElapsed());
-        CoreEvents.registerProjectChangeListener(new ProjectChangeListener());
-   }
- 
-    public static void unloadPlugins() {
-        // do nothing
-    }
- 
-    @Override
-    public void onApplicationStartup() {
-        // remove ApplicationEventListener
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                CoreEvents.unregisterApplicationEventListener(TimeElapsed.this);
-            }
-        });
-    }
+public class ProjectChangeListener implements IProjectEventListener{
  
     
     @Override
-    public void onApplicationShutdown(){
-        // do nothing 
+    public void onProjectChanged(PROJECT_CHANGE_TYPE eventType) {
+        TimeElapsedTracker timeElapsedTracker = new TimeElapsedTracker();
+        TimeLog timeLog = TimeLog.getTimeLog();
+        switch(eventType){
+            case LOAD:
+                //do somethinge
+                try {
+                    timeLog.addJLabel();
+                    timeLog.setElapsedTime(timeElapsedTracker.getTimeElapsed()); 
+                    timeLog.startTimer();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace(System.err);
+                } catch (IOException e){
+                    e.printStackTrace(System.err);
+                }
+                break;
+
+            case CLOSE:
+                //do something
+                try {
+                    timeLog.stopTimer();
+                    timeElapsedTracker.setTimeElaspsed(timeLog.getElapsedTime());
+                    timeLog.removeJLabel();
+                    
+                } catch (IOException e) {
+                    e.printStackTrace(System.err);
+                }
+               
+             
+        }
     }
 }
