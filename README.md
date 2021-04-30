@@ -4,7 +4,7 @@
 
 An OmegaT plugin to keep track of time elapsed using the software.
 
-![](https://github.com/vaish3496/TimeElapsed-OmegaT-Plugin/blob/master/screenshots/SS1.PNG)
+![](https://github.com/vaish3496/TimeElapsed-OmegaT-Plugin/blob/master/screenshots/ss3.PNG)
 
 ## Build system
 
