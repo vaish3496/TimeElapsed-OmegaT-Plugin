@@ -2,9 +2,12 @@
 
 ## Preview
 
-An OmegaT plugin to keep track of time elapsed using the software.
+An OmegaT plugin to keep track of time elapsed translating a particular project.
 
 ![](https://github.com/vaish3496/TimeElapsed-OmegaT-Plugin/blob/master/screenshots/ss3.PNG)
+
+It stores time elapsed for a particular project in timeElapsed.txt file. Whenever the project is loaded, the timer starts from previous elapsed Time. 
+![](https://github.com/vaish3496/TimeElapsed-OmegaT-Plugin/blob/master/screenshots/ss2.PNG)
 
 ## Build system
 
